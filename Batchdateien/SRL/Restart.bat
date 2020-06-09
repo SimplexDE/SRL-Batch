@@ -1,3 +1,3 @@
 @echo off
-Shutdown.exe -r -t 3
+Shutdown.exe -r -f -t 180 -c "Dein PC wird in 3 Minuten Neugestartet."
 cls
