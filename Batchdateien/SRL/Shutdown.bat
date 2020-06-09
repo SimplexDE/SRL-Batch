@@ -1,3 +1,3 @@
 @echo off
-Shutdown.exe -s -t 3
+Shutdown.exe -s -f -t 180 -c "Dein Rechner wird in 3 Minuten Heruntergefahren."
 cls
