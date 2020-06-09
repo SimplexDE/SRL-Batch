@@ -9,3 +9,11 @@
   * *Mit dieser Batch Datei kannst du deinen Windows Rechner in wenigen Klicks neustarten.*
 * **Lock Batch**
   * *Mit der Lock Batch Datei, kannst du deinen Bildschirm Sperren.*
+
+## Zukünftige Funktionen
+
+* **USB-Stick-Lock**
+  * *Mit der USB-Stick-Lock Datei, kannst du deinen USB Stick Sperren.*
+    * ***Benötigt BitLocker geschützten Stick***
+* **Tresor-Batch**
+  * *Mit der Tresor-Batch kannst du dir einen "Privaten" Ordner erstellen.
