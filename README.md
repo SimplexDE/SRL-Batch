@@ -12,8 +12,5 @@
 
 ## Zukünftige Funktionen
 
-* **USB-Stick-Lock**
-  * *Mit der USB-Stick-Lock Datei, kannst du deinen USB Stick Sperren.*
-    * ***Benötigt BitLocker geschützten Stick***
 * **Tresor-Batch**
   * *Mit der Tresor-Batch kannst du dir einen "Privaten" Ordner erstellen.
