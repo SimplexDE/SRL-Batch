@@ -17,7 +17,6 @@ echo.
 set /p password="Passwort: "
 echo %password% > Tresorpassword.txt
 attrib +h +s Tresorpassword.txt
-echo Bitte warten bis sich das Programm beendet...
 timeout 9>nul
 exit
 
