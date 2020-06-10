@@ -81,10 +81,13 @@ cls
 echo 2) Passwort Verwalten.
 echo 1) Tresor Oeffnen.
 echo 0) Tresor Schliessen.
+echo E) Exit
 set /p cho1=">>>"
 if %cho1%==2 goto PASSWORDVERWALTEN
 if %cho1%==1 goto UNLOCK
 if %cho1%==0 goto LOCK
+if %cho1%==E exit
+if %cho1%==e exit
 echo Falsche Eingabe...
 goto AUSWAHL
 
@@ -94,10 +97,15 @@ cls
 echo 2) Passwort Veraendern.
 echo 1) Passwort Datei Anzeigen.
 echo 0) Passwort Datei Verstecken.
+echo M) Zurueck zum Menu.
 set /p cho2=">>>"
 if %cho2%==2 goto PWCHANGE
 if %cho2%==1 goto PWUNHIDE
 if %cho2%==0 goto PWHIDE
+if %cho2%==M goto AUSWAHL
+if %cho2%==m goto AUSWAHL
+echo Falsche Eingabe
+goto PASSWORDVERWALTEN
 
 :PWCHANGE
 color 4
@@ -105,14 +113,15 @@ cls
 echo Bitte gebe dein neues Passwort ein.
 set /p newpass="Passwort: "
 echo %newpass% > Tresorpassword.txt
+goto PASSWORDVERWALTEN
 
 :PWHIDE
 attrib +h +s Tresorpassword.txt
-goto AUSWAHL
+goto PASSWORDVERWALTEN
 
 :PWUNHIDE
 attrib -h -s Tresorpassword.txt
-goto AUSWAHL
+goto PASSWORDVERWALTEN
 
 :LOCK
 ren Tresor "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
@@ -135,3 +144,4 @@ md Tresor
 goto PASSWORDCHECKEXISTS
 
 :END
+goto AUSWAHL
