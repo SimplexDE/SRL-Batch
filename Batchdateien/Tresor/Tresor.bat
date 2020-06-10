@@ -1,5 +1,42 @@
 @ECHO OFF
-title Tresor - 1.0
+title Tresor - DEBUG
+
+::Die Debug Version ist nur zum Testen da, sie soll nicht zur Nutzung von den Funktionen sein.
+
+:DEBUGWARN
+color 4a
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                   !!! Warnung !!!
+echo.
+echo                                       Du befindest dich in der debug Version!
+echo                                  Diese Version kann viele Bugs/Fehler beinhalten.
+echo.
+echo                                 Diese Version wird NIE mit der master Branch Gemerged.
+echo.
+echo                                                   !!! Warnung !!!
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo Fortfahren mit eine Beliebigen Taste.
+pause >NUL
+cls
+goto START
 
 :START
 if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto PASSWORDCHECKEXISTS
@@ -12,7 +49,8 @@ if NOT EXIST Tresorpassword.txt goto PASSWORDCREATE
 :PASSWORDCREATE
 color c
 cls
-echo Bitte gebe ein Passwort ein.
+echo Es wurde kein Passwort gefunden,
+echo Bitte gebe ein neues Passwort ein.
 echo.
 set /p password="Passwort: "
 echo %password% > Tresorpassword.txt
@@ -22,7 +60,9 @@ exit
 
 :PASSWORD
 color a
-echo Bitte gebe dein Passwort ein.
+echo - debug ZUM SKIPPEN -
+echo Es wurde 1 Passwort gefunden,
+echo Bitte dein Passwort Eingeben.
 echo.
 set /p pass="Passwort: "
 for /f "Delims=" %%a in (Tresorpassword.txt) do (
@@ -32,6 +72,7 @@ set password=%%a
 )
 
 if %pass%==%password% goto AUSWAHL
+if %pass%==debug goto AUSWAHL
 goto FAIL
 
 :AUSWAHL
