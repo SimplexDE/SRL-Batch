@@ -10,7 +10,7 @@
 * **Lock Batch**
   * *Mit der Lock Batch Datei, kannst du deinen Bildschirm Sperren.*
 * **Tresor-Batch**
-  * *Mit der Tresor-Batch kannst du dir einen "Privaten" Ordner erstellen.
+  * *Mit der Tresor-Batch kannst du dir einen "Privaten" Ordner erstellen.*
 
 ## Zukünftige Funktionen
 
